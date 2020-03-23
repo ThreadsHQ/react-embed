@@ -36,6 +36,7 @@ const defaultBlocks: Blocks = {
   tweet: React.lazy(() => import('./blocks/tweet')),
   youtube: React.lazy(() => import('./blocks/youtube')),
   gfycat: React.lazy(() => import('./blocks/gfycat')),
+  loom: React.lazy(() => import('./blocks/loom')),
 };
 
 export type ReactEmbedRouterResult = undefined | [undefined | React.ComponentType<BlockProps>, EmbedBlockId];
