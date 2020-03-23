@@ -29,6 +29,9 @@
     "storybook:build": "build-storybook",
     "storybook:clean": "rimraf storybook-static"
   },
+  "precommit": [
+     "build"
+   ],
   "keywords": [],
   "peerDependencies": {
     "react": "*",
