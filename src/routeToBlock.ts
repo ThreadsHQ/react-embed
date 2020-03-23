@@ -37,6 +37,12 @@ const routeGist: ReactEmbedRouter = (blocks, {pathname}) => {
   return [blocks.gist, steps[2]];
 };
 
+const routeLoom: ReactEmbedRouter = (blocks, {pathname}) => {
+  const steps = pathname.split('/');
+  if (steps.length < 2) return undefined;
+  return [blocks.loom, steps[1]];
+};
+
 const routeReplit: ReactEmbedRouter = (blocks, {pathname}) => {
   const steps = pathname.split('/');
   if (steps.length !== 3) return undefined;
@@ -87,6 +93,8 @@ const routeToBlock: ReactEmbedRouter = (blocks: Blocks, parsed: ParsedUrl) => {
       return routeGoogle(blocks, parsed);
     case 'gfycat.com':
       return routeGfycat(blocks, parsed);
+    case 'loom.com':
+      return routeLoom(blocks, parsed);
     default:
       if (canPlay(url)) {
         return [blocks.reactPlayer, ''];
