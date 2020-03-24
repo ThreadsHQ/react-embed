@@ -1,6 +1,6 @@
 {
-  "name": "react-embed",
-  "version": "3.0.1",
+  "name": "ThreadsHQ/react-embed",
+  "version": "3.0.3",
   "description": "",
   "author": {
     "name": "streamich",
@@ -91,6 +91,9 @@
     "commitizen": {
       "path": "git-cz"
     }
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "p4-css": "^1.1.0",
